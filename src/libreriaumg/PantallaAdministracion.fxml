@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.PantallaAdministracionController">
+   <children>
+      <TabPane prefHeight="539.0" prefWidth="1171.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="USUARIOS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="58.0" prefWidth="103.0">
+                     <children>
+                        <TextField fx:id="txtidusuario" editable="false" layoutX="232.0" layoutY="64.0" />
+                        <TextField fx:id="txtcarneusuario" layoutX="232.0" layoutY="95.0" />
+                        <TextField fx:id="txtcontrausuario" layoutX="232.0" layoutY="122.0" />
+                        <TextField fx:id="txtnombreusuario" layoutX="232.0" layoutY="154.0" />
+                        <TextField fx:id="txtapellidousuario" layoutX="232.0" layoutY="187.0" />
+                        <TextField fx:id="txttelusuario" layoutX="232.0" layoutY="220.0" />
+                        <TextField fx:id="txtdireusuario" layoutX="232.0" layoutY="253.0" />
+                        <Label layoutX="97.0" layoutY="68.0" text="ID Usuario" />
+                        <Label layoutX="97.0" layoutY="99.0" text="Carné" />
+                        <Label layoutX="97.0" layoutY="126.0" text="Contraseña" />
+                        <Label layoutX="94.0" layoutY="158.0" text="Nombre" />
+                        <Label layoutX="94.0" layoutY="191.0" text="Apellido" />
+                        <Label layoutX="94.0" layoutY="224.0" text="Telefono" />
+                        <Label layoutX="94.0" layoutY="257.0" text="Dirección" />
+                        <Button fx:id="btnagregaru" layoutX="90.0" layoutY="312.0" mnemonicParsing="false" onAction="#clickA" prefHeight="44.0" prefWidth="89.0" text="Agregar" />
+                        <Button fx:id="btnactualizaru" layoutX="232.0" layoutY="312.0" mnemonicParsing="false" onAction="#clickAC" prefHeight="44.0" prefWidth="89.0" text="Actualizar" />
+                        <Button fx:id="btneliminaru" layoutX="166.0" layoutY="394.0" mnemonicParsing="false" onAction="#clickE" prefHeight="44.0" prefWidth="89.0" text="Eliminar" />
+                        <TableView fx:id="tablausuario" layoutX="400.0" layoutY="145.0" prefHeight="210.0" prefWidth="746.0">
+                          <columns>
+                            <TableColumn fx:id="colid_usuario" prefWidth="75.0" text="ID Usuario" />
+                            <TableColumn fx:id="colcarne" prefWidth="99.0" text="Carné" />
+                            <TableColumn fx:id="colcontrasena" prefWidth="69.0" text="Contraseña" />
+                            <TableColumn fx:id="colnombre" prefWidth="120.0" text="Nombre" />
+                            <TableColumn fx:id="colapellido" prefWidth="106.0" text="Apellido" />
+                            <TableColumn fx:id="coltelefono" prefWidth="88.0" text="Teléfono" />
+                            <TableColumn fx:id="coldireccion" prefWidth="188.0" text="Dirección" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="txtbuscarusuario" layoutX="663.0" layoutY="95.0" onKeyReleased="#buscarUsuario" />
+                        <Label layoutX="508.0" layoutY="99.0" text="Busqueda de usuarios" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="LIBROS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="58.0" prefWidth="103.0">
+                     <children>
+                        <TextField fx:id="txtidlibro" editable="false" layoutX="232.0" layoutY="64.0" />
+                        <TextField fx:id="txtisbnlibro" layoutX="232.0" layoutY="95.0" />
+                        <TextField fx:id="txttitulolibro" layoutX="232.0" layoutY="122.0" />
+                        <TextField fx:id="txtautorlibro" layoutX="232.0" layoutY="154.0" />
+                        <TextField fx:id="txtpublilibro" layoutX="232.0" layoutY="187.0" />
+                        <TextField fx:id="txteditolibro" layoutX="232.0" layoutY="220.0" />
+                        <TextField fx:id="txtcantidadlibro" layoutX="232.0" layoutY="253.0" />
+                        <Label layoutX="97.0" layoutY="68.0" text="ID Libro" />
+                        <Label layoutX="97.0" layoutY="99.0" text="ISBN" />
+                        <Label layoutX="97.0" layoutY="126.0" text="Titulo" />
+                        <Label layoutX="94.0" layoutY="158.0" text="Autor" />
+                        <Label layoutX="66.0" layoutY="191.0" text="Año Publicación" />
+                        <Label layoutX="87.0" layoutY="224.0" text="Editorial" />
+                        <Label layoutX="87.0" layoutY="257.0" text="Cantidad" />
+                        <Button fx:id="btnagregarl" layoutX="90.0" layoutY="312.0" mnemonicParsing="false" onAction="#clickAL" prefHeight="44.0" prefWidth="89.0" text="Agregar" />
+                        <Button fx:id="btnactualizarl" layoutX="232.0" layoutY="312.0" mnemonicParsing="false" onAction="#clickACL" prefHeight="44.0" prefWidth="89.0" text="Actualizar" />
+                        <Button fx:id="btneliminarl" layoutX="166.0" layoutY="394.0" mnemonicParsing="false" onAction="#clickEL" prefHeight="44.0" prefWidth="89.0" text="Eliminar" />
+                        <TableView fx:id="tablalibros" layoutX="400.0" layoutY="145.0" prefHeight="210.0" prefWidth="746.0">
+                           <columns>
+                              <TableColumn fx:id="colid_libro" prefWidth="58.0" text="ID Libro" />
+                              <TableColumn fx:id="colisbn" prefWidth="63.0" text="ISBN" />
+                              <TableColumn fx:id="coltitulo" prefWidth="139.0" text="Titulo" />
+                              <TableColumn fx:id="colautor" prefWidth="158.0" text="Autor" />
+                              <TableColumn fx:id="colpublicacion" prefWidth="97.0" text="Año Publicación" />
+                              <TableColumn fx:id="coleditorial" prefWidth="152.0" text="Editorial" />
+                              <TableColumn fx:id="colcantidad" prefWidth="81.0" text="Cantidad" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="txtbuscarlibro" layoutX="673.0" layoutY="105.0" onKeyReleased="#buscarLibro" />
+                        <Label layoutX="518.0" layoutY="109.0" text="Busqueda de libros" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="459.0" style="-fx-background-color: mediumaquamarine;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.LoginController">
+   <children>
+      <TextField fx:id="txtusuariol" layoutX="163.0" layoutY="154.0" />
+      <PasswordField fx:id="txtpassl" layoutX="163.0" layoutY="216.0" />
+      <Button fx:id="btningresol" layoutX="185.0" layoutY="255.0" mnemonicParsing="false" onAction="#click" prefHeight="33.0" prefWidth="106.0" text="Ingreso" />
+      <Button fx:id="btncrearcuental" layoutX="365.0" layoutY="353.0" mnemonicParsing="false" onAction="#clickCC" text="Crear Cuenta" />
+      <ImageView fitHeight="116.0" fitWidth="136.0" layoutX="172.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/usuario%20(Custom).png" />
+         </image></ImageView>
+      <Label layoutX="53.0" layoutY="158.0" text="Usuario">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="53.0" layoutY="220.0" text="Contraseña">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="253.0" layoutY="357.0" text="¿No tienes cuenta?">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnsalirl" layoutX="22.0" layoutY="349.0" mnemonicParsing="false" onAction="#clickS" prefHeight="33.0" prefWidth="106.0" text="Salir" />
+   </children>
+</AnchorPane>
